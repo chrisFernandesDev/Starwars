@@ -11,6 +11,10 @@
         android:theme="@style/Theme.Starwars">
         <activity
             android:name=".MainActivity"
+            android:exported="false" />
+        <activity
+            android:name=".SplashActivity"
+            android:theme="@style/Theme.Design.NoActionBar"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

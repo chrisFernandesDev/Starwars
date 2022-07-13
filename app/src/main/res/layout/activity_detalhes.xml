@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/titulo_recebe_detalhes"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20sp"
+        android:gravity="center"
+        android:text="The Empire Strikes Back"
+        android:textColor="@color/black"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imagem_recebe_detalhes"
+        android:layout_width="150dp"
+        android:layout_height="200dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        android:background="@color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/titulo_recebe_detalhes" />
+
+    <TextView
+        android:id="@+id/titulo_release_fixo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="2dp"
+        android:text="Release"
+        android:textColor="@color/black"
+        android:textSize="17sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/imagem_recebe_detalhes"
+        app:layout_constraintTop_toTopOf="@+id/imagem_recebe_detalhes" />
+
+    <TextView
+        android:id="@+id/data_recebe"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:text="17/05/1980"
+        android:textColor="@color/black"
+        android:textSize="13sp"
+        app:layout_constraintStart_toEndOf="@id/imagem_recebe_detalhes"
+        app:layout_constraintTop_toBottomOf="@+id/titulo_release_fixo" />
+
+    <TextView
+        android:id="@+id/titulo_director_fixo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:text="Director"
+        android:textColor="@color/black"
+        android:textSize="17sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/imagem_recebe_detalhes"
+        app:layout_constraintTop_toBottomOf="@id/data_recebe" />
+
+    <TextView
+        android:id="@+id/diretor_recebe_detalhes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:maxEms="14"
+        android:text="Irvin Kershnner"
+        android:textColor="@color/black"
+        android:textSize="13sp"
+        app:layout_constraintStart_toEndOf="@id/imagem_recebe_detalhes"
+        app:layout_constraintTop_toBottomOf="@+id/titulo_director_fixo" />
+
+    <TextView
+        android:id="@+id/titulo_producter_fixo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:maxEms="14"
+        android:text="Producter(s)"
+        android:textColor="@color/black"
+        android:textSize="17sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/imagem_recebe_detalhes"
+        app:layout_constraintTop_toBottomOf="@id/diretor_recebe_detalhes" />
+
+    <TextView
+        android:id="@+id/producter_recebe_detalhes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:maxEms="14"
+        android:text="Gary Kurtz, Rick McCallum"
+        android:textColor="@color/black"
+        android:textSize="13sp"
+        app:layout_constraintStart_toEndOf="@id/imagem_recebe_detalhes"
+        app:layout_constraintTop_toBottomOf="@id/titulo_producter_fixo" />
+
+    <TextView
+        android:id="@+id/titulo_episode_fixo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:text="Episodio"
+        android:textColor="@color/black"
+        android:textSize="17sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/imagem_recebe_detalhes"
+        app:layout_constraintTop_toBottomOf="@id/producter_recebe_detalhes" />
+
+    <TextView
+        android:id="@+id/episode_recebe_detalhes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:text="5"
+        android:textColor="@color/black"
+        android:textSize="13sp"
+        app:layout_constraintStart_toEndOf="@id/imagem_recebe_detalhes"
+        app:layout_constraintTop_toBottomOf="@id/titulo_episode_fixo" />
+
+
+<!--    Textos sobre-->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:layout_marginTop="40dp"
+        android:maxEms="15"
+        android:text="@string/teste"
+        app:layout_constraintTop_toBottomOf="@+id/imagem_recebe_detalhes"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

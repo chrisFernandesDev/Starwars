@@ -29,11 +29,18 @@ android {
     kotlinOptions {
         jvmTarget = '1.8'
     }
+
+    viewBinding {
+        enabled = true
+    }
 }
 
 dependencies {
 
-    implementation 'androidx.core:core-ktx:1.7.0'
+//    def retrofit_version = "2.9.0"
+//    def moshi_version = "1.9.3"
+
+    implementation 'androidx.core:core-ktx:1.8.0'
     implementation 'androidx.appcompat:appcompat:1.4.2'
     implementation 'com.google.android.material:material:1.6.1'
     implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
@@ -44,13 +51,28 @@ dependencies {
     //LiveData
     implementation "android.arch.lifecycle:livedata:1.1.1"
 
-    //noinspection LifecycleAnnotationProcessorWithJava8
-//    annotationProcessor "android.arch.lifecycle:compiler:1.1.1"
+    //Retrofit
+//    implementation "com.squareup.retrofit2:retrofit:2.9.0"
+
+    //moshi
+//    implementation "com.squareup.moshi:moshi-kotlin:1.12.0"
+
+    //Retrofit
+    implementation 'com.squareup.retrofit2:retrofit:2.4.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.4.0'
+    implementation 'com.squareup.okhttp3:logging-interceptor:3.10.0'
+    implementation 'com.squareup.okhttp3:okhttp:3.10.0'
+
+
+    //Gson
+    implementation 'com.android.support:support-annotations:27.1.1'
+    implementation 'com.google.code.gson:gson:2.8.4'
+
+    //Retrofit with moshi
+//    implementation "com.squareup.retrofit2:converter-moshi:2.9.0"
 
     //Picasso
-//    implementation 'com.squareup.picasso:picasso: 2.5.2'
-
-
+    implementation 'com.squareup.picasso:picasso:2.8'
 
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.3'

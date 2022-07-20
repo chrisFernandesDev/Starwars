@@ -1,30 +1,23 @@
 package com.projeto.starwars.viewmodel
 
-import android.arch.lifecycle.MutableLiveData
-import android.arch.lifecycle.ViewModel
-import com.projeto.starwars.model.Categoria
+import android.arch.lifecycle.*
+import com.projeto.starwars.model.Filme
 import java.util.ArrayList
 
-class CategoriaViewModel(categoria : Categoria) : ViewModel() {
-    
-    var arrayListMutableLiveData = MutableLiveData<List<String>>()
+class CategoriaViewModel(filme: Filme) : ViewModel() {
 
-    var categoriaArrayLista = ArrayList<String>()
+    var arrayListMutableLiveData = MutableLiveData<List<Filme>>()
+    var categoriaLista = ArrayList<Filme>()
 
-    fun getCategoriArrayLista(): MutableLiveData<List<String>> {
+//    val categoriaLista: LiveData<List<Categoria>>
+//        get() = arrayListMutableLiveData
 
-        val categoria1 = Categoria(id = "teste", titulo = "teste")
-        val categoria2 = Categoria(id = "teste2", titulo = "teste2")
+    fun getCategoriListas(): MutableLiveData<List<Filme>> {
 
-        val categoriaViewModelLista1 : CategoriaViewModel = CategoriaViewModel(categoria1)
-        val categoriaViewModelLista2 : CategoriaViewModel = CategoriaViewModel(categoria2)
-
-        categoriaArrayLista!!.add(categoriaViewModelLista1.toString())
-        categoriaArrayLista!!.add(categoriaViewModelLista2.toString())
-
-        arrayListMutableLiveData.value = categoriaArrayLista
 
         return arrayListMutableLiveData
     }
+
+
 
 }

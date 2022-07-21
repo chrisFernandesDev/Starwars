@@ -9,14 +9,11 @@ data class Filme(
     @SerializedName("image")
     val image: String,
 
-    @SerializedName("name")
-    val name: String,
-
     @SerializedName("title")
     val title: String,
 
     @SerializedName("episode_id")
-    val episode_id: Int,
+    val episode_id: String,
 
     @SerializedName("opening_crawl")
     val opening_crawl: String,

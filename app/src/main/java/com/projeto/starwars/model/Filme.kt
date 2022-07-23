@@ -1,9 +1,6 @@
 package com.projeto.starwars.model
 
 import com.google.gson.annotations.SerializedName
-import com.projeto.starwars.api.Repositorio
-import java.util.*
-import kotlin.collections.ArrayList
 
 data class Filme(
     @SerializedName("image")
@@ -30,3 +27,5 @@ data class Filme(
     @SerializedName("url")
     val url: String
 )
+
+//Criar um filme expecifico FilmeDetalhe

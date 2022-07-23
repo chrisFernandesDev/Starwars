@@ -12,7 +12,7 @@ import com.projeto.starwars.model.Filme
 import com.squareup.picasso.Callback
 import com.squareup.picasso.Picasso
 
-class FilmeAdapter(private val context: Context, private val filme: MutableList<Filme>): RecyclerView.Adapter<FilmeAdapter.FilmeViewHolder>() {
+class FilmeAdapter(private val context: Context, private val filme: List<Filme>): RecyclerView.Adapter<FilmeAdapter.FilmeViewHolder>() {
 
     inner class FilmeViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         fun bindData( filme: Filme){

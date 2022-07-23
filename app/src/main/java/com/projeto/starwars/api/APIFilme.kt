@@ -37,4 +37,7 @@ object ApiCliente {
 interface ApiService {
     @GET("films")
     fun fetchFilms(): Call<ListaDeFilmes>
+
+//    @GET("filme/id")
+//    fun fetchFilmeId(): Call<FilmeExpecifico>
 }

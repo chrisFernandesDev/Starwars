@@ -12,3 +12,7 @@ data class ListaDeFilmes(
     @SerializedName("results")
     var films: ArrayList<Filme>
 )
+
+data class Caixa(
+    val caixa: Caixa?
+)

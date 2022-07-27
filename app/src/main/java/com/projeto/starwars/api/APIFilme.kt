@@ -1,6 +1,7 @@
 package com.projeto.starwars.api
 
 import com.google.gson.GsonBuilder
+import com.projeto.starwars.model.Filme
 import com.projeto.starwars.model.ListaDeFilmes
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
@@ -8,6 +9,7 @@ import retrofit2.Call
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 import retrofit2.http.GET
+import retrofit2.http.Path
 import java.util.concurrent.TimeUnit
 
 object ApiCliente {
@@ -38,6 +40,8 @@ interface ApiService {
     @GET("films")
     fun fetchFilms(): Call<ListaDeFilmes>
 
-//    @GET("filme/id")
-//    fun fetchFilmeId(): Call<FilmeExpecifico>
+    @GET("films/{id}")
+    fun fetchFilmsId(
+        @Path("id") idFilme: String,
+    ):Call<Filme>
 }

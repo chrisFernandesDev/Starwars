@@ -27,5 +27,3 @@ data class Filme(
     @SerializedName("url")
     val url: String
 )
-
-//Criar um filme expecifico FilmeDetalhe

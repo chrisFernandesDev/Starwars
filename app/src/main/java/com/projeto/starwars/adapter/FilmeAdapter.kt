@@ -9,10 +9,17 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.projeto.starwars.R
 import com.projeto.starwars.model.Filme
-import com.squareup.picasso.Callback
 import com.squareup.picasso.Picasso
 
-class FilmeAdapter(private val context: Context, private val filme: List<Filme>): RecyclerView.Adapter<FilmeAdapter.FilmeViewHolder>() {
+typealias OnItemClickListener =  (filme : Filme) -> Unit
+
+class FilmeAdapter(
+    private val context: Context,
+    private val filme: List<Filme>,
+    private val onItemClickListener : OnItemClickListener
+): RecyclerView.Adapter<FilmeAdapter.FilmeViewHolder>() {
+
+//    private lateinit var mListener : OnItemClickListener
 
     inner class FilmeViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         fun bindData( filme: Filme){
@@ -29,6 +36,10 @@ class FilmeAdapter(private val context: Context, private val filme: List<Filme>)
             textoEpisodioRecebe.text = filme.episode_id
             nomeDiretorRecebe.text = filme.director
             nomeAnoRecebe.text = filme.release_date
+
+            itemView.setOnClickListener {
+                onItemClickListener(filme)
+            }
         }
     }
 
@@ -45,4 +56,12 @@ class FilmeAdapter(private val context: Context, private val filme: List<Filme>)
     override fun getItemCount(): Int {
         return filme.size
     }
+
+//    fun setOnItemClickListener(listener: OnItemClickListener){
+//        mListener = listener
+//    }
+
+//    interface OnItemClickListener{
+//        fun onItemClick(position : Int)
+//    }
 }

@@ -17,25 +17,19 @@ class FilmeViewModel() : ViewModel() {
     val apiFilme = ApiCliente.apiService.fetchFilms()
 
     fun apiFilmeMake(){
-        Log.d("Teste", "chamando API")
         apiFilme.enqueue(object: retrofit2.Callback<ListaDeFilmes>{
             override fun onResponse(
                 call: retrofit2.Call<ListaDeFilmes>,
                 response: Response<ListaDeFilmes>
             ) {
-                Log.d("Teste", "Sucesso")
                 if (response.isSuccessful) {
                     val filmeLista = response.body()?.films
-//                    filmeLista?.let { lista ->
-//                        return lista.sortWith(compareBy { it.episode_id })
-//                    }
-                    filmes.value = filmeLista
+                    filmes.value = filmeLista?.sortedWith(compareBy { it.episode_id })
                 }
             }
             override fun onFailure(call: retrofit2.Call<ListaDeFilmes>, t: Throwable) {
                 Log.e("VM failed", "" + t.message)
             }
-
         })
     }
 }

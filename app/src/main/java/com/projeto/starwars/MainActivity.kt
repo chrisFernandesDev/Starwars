@@ -19,6 +19,9 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        setSupportActionBar(findViewById(R.id.toolbar))
+
+        supportActionBar?.setDisplayHomeAsUpEnabled(false)
 
         getView()
 
@@ -28,7 +31,6 @@ class MainActivity : AppCompatActivity() {
         recyclerView.setHasFixedSize(true)
         getObserve()
         viewModel?.apiFilmeMake()
-
     }
 
     fun getObserve() {

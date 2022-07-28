@@ -6,4 +6,5 @@
     <string name="realease_year">Realease Year:</string>
     <string name="release">Release</string>
     <string name="producter_s">Producter(s)</string>
+    <string name="detail">Detail</string>
 </resources>

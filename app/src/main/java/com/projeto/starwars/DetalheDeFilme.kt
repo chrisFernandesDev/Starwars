@@ -1,6 +1,7 @@
 package com.projeto.starwars
 
 import android.os.Bundle
+import android.view.View
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
@@ -23,6 +24,9 @@ class DetalheDeFilme : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_detalhes)
+        setSupportActionBar(findViewById(R.id.toolbar))
+
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
         getView()
 
@@ -58,5 +62,4 @@ class DetalheDeFilme : AppCompatActivity() {
             textoSobre.text = detalhesFilmes.opening_crawl
         }
     }
-
 }

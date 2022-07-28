@@ -2,28 +2,32 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.projeto.starwars">
 
-    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
-        android:label="@string/app_name"
+        android:label=""
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-
         android:theme="@style/Theme.Starwars">
         <activity
-            android:name=".DetalheDeFilme"
-            android:theme="@style/Theme.Design.Light.NoActionBar"
-            android:exported="false" />
-        <activity
             android:name=".MainActivity"
-            android:theme="@style/Theme.Design.Light.NoActionBar"
-            android:exported="false" />
+            android:exported="false"/>
+
+        <activity
+            android:name=".DetalheDeFilme"
+            android:parentActivityName=".MainActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
+        </activity>
+
         <activity
             android:name=".SplashActivity"
-            android:theme="@style/Theme.Design.NoActionBar"
-            android:exported="true">
+            android:exported="true"
+            android:theme="@style/Theme.Design.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
